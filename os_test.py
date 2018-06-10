@@ -13,10 +13,14 @@ if __name__=='__main__':
     print('Rozmiar :',stat.st_size)
     atime = datetime.fromtimestamp(stat.st_atime)
     print('Ostatni dostęp :', atime)
+    print(os.getcwd()) #current directory
 
 
     for file_name in os.listdir('.'):
         stat = os.stat(file_name)
         print(file_name, ' :', stat.st_size, datetime.fromtimestamp(stat.st_atime))
+
+
+#os.path.join(path, file_name)
 
 
